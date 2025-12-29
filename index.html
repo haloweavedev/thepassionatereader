@@ -290,7 +290,7 @@
                  <p class="font-sans text-xs font-bold tracking-widest text-beige-900/50 uppercase mb-4">
                    Susan Wojciechowski
                  </p>
-                 <p class="font-sans text-beige-800/80 text-sm leading-relaxed line-clamp-3 mb-6">
+                 <p class="font-sans text-beige-800/80 text-[0.95rem] leading-relaxed line-clamp-3 mb-6">
                    Despite being a family of non-believers, every year we pull out our holiday paraphernalia. We dress the tree, hanging with care the delicate glass ornaments gifted to us over the many years...
                  </p>
                  
@@ -319,7 +319,7 @@
                  <p class="font-sans text-xs font-bold tracking-widest text-beige-900/50 uppercase mb-4">
                    Kate Stewart
                  </p>
-                 <p class="font-sans text-beige-800/80 text-sm leading-relaxed line-clamp-3 mb-6">
+                 <p class="font-sans text-beige-800/80 text-[0.95rem] leading-relaxed line-clamp-3 mb-6">
                    The Plight Before Christmas needs an editor, has leads in their late thirties who behave at least ten years younger, and manufactures so much angst in its final few chapters...
                  </p>
                  
@@ -348,7 +348,7 @@
                  <p class="font-sans text-xs font-bold tracking-widest text-beige-900/50 uppercase mb-4">
                    Katie Lane
                  </p>
-                 <p class="font-sans text-beige-800/80 text-sm leading-relaxed line-clamp-3 mb-6">
+                 <p class="font-sans text-beige-800/80 text-[0.95rem] leading-relaxed line-clamp-3 mb-6">
                    Hunk for the Holidays knows exactly what it is: a light Christmas love story that exists just to entertain. Lane leans into the charm of a slightly ridiculous premise...
                  </p>
                  
@@ -364,6 +364,40 @@
               <a href="reviews.html" class="inline-flex items-center justify-center transition-all duration-300 ease-out font-sans font-medium rounded-full tracking-wide bg-white text-beige-900 border border-beige-300 hover:border-primary hover:text-primary hover:shadow-lg transform hover:-translate-y-0.5 text-sm px-8 py-3">
                   View All Reviews
               </a>
+           </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="py-24 px-[clamp(1.5rem,5vw,5rem)] w-full relative overflow-hidden bg-beige-100">
+           <!-- Background Image & Overlay -->
+           <div class="absolute inset-0 bg-[url('newsletter-section.jpg')] bg-cover bg-center bg-no-repeat opacity-60 pointer-events-none"></div>
+           <div class="absolute inset-0 bg-white/30 backdrop-blur-[1px]"></div>
+           
+           <!-- Decorative Background Elements -->
+           <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+           <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+           <div class="relative w-full max-w-2xl mx-auto text-center z-10">
+             <span class="font-sans text-xs md:text-sm font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Stay in the Loop</span>
+             <h2 class="font-serif text-4xl md:text-5xl text-beige-900 mb-6">A Weekly Dose of Literature</h2>
+             <p class="font-sans text-beige-800/70 text-lg font-light leading-relaxed mb-10">
+               Join our community of passionate readers. Receive hand-picked book recommendations, exclusive reviews, and literary essays directly to your inbox every Sunday.
+             </p>
+
+             <form class="flex flex-col md:flex-row items-stretch gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault();">
+               <input 
+                 type="email" 
+                 placeholder="Your email address" 
+                 class="flex-1 bg-white border border-beige-300 text-beige-900 text-sm rounded-full px-6 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-beige-400"
+                 required
+               >
+               <button type="submit" class="inline-flex items-center justify-center transition-all duration-300 ease-out font-sans font-medium rounded-full tracking-wide bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20 transform hover:-translate-y-0.5 text-sm px-8 py-3">
+                 Subscribe
+               </button>
+             </form>
+             <p class="font-sans text-[10px] text-beige-800/40 uppercase tracking-wider mt-4">
+               No spam, ever. Unsubscribe at any time.
+             </p>
            </div>
         </section>
       </main>
