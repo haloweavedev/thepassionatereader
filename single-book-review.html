@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review: The Christmas Miracle of Jonathan Toomey — The Passionate Reader</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              beige: {
+                50: '#FDFBF9',
+                100: '#F9F5F0', // Main Background
+                200: '#F2EBE0',
+                300: '#E6DCCF',
+                800: '#4A4641',
+                900: '#2D2A26', // Primary Text (Soft Black)
+              },
+              primary: {
+                DEFAULT: '#FF1D8D', // Rose Pink
+                light: '#FF64B0',
+                dark: '#D6006D',
+                10: '#FF1D8D1A', // 10% opacity
+                20: '#FF1D8D33', // 20% opacity
+              },
+              accent: {
+                DEFAULT: '#D4C5B0', // Warm sand
+                light: '#EBE0D0',
+                peach: '#F2D4C2',
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Manrope"', 'sans-serif'],
+            },
+            boxShadow: {
+              'book': '0 25px 50px -12px rgba(45, 42, 38, 0.25), 0 10px 30px -5px rgba(45, 42, 38, 0.15)',
+              'soft': '0 4px 30px rgba(127, 133, 193, 0.1)',
+            },
+            maxWidth: {
+              'site': '1400px', // Wider max width
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F9F5F0;
+        color: #2D2A26;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Initial letter styling */
+      .drop-cap {
+        float: left;
+        font-family: "Playfair Display", serif;
+        font-size: 5rem;
+        line-height: 0.8;
+        padding-top: 0.1em;
+        padding-right: 0.15em;
+        margin-top: -0.1em;
+        color: #FF1D8D;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      /* Ensure text wraps nicely around the floated image */
+      .wrap-text {
+        overflow: visible; 
+      }
+    </style>
+  </head>
+  <body class="bg-beige-100">
+    <div class="min-h-screen py-12 px-[clamp(1.5rem,5vw,5rem)]">
+      
+       <!-- Back Navigation -->
+       <nav class="max-w-site mx-auto mb-12 flex justify-between items-center">
+         <a href="index.html" class="group inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-beige-800 hover:text-primary transition-colors">
+            <span class="transform group-hover:-translate-x-1 transition-transform">←</span>
+            Back to Journal
+          </a>
+          
+          <div class="hidden md:flex items-center gap-4 text-xs font-serif italic text-beige-400">
+             <span>December 25, 2025</span>
+          </div>
+       </nav>
+
+      <div class="max-w-site mx-auto">
+        
+        <!-- Header / Meta Top -->
+        <div class="mb-10 md:mb-16 border-b border-beige-300/50 pb-8">
+           <div class="flex flex-wrap items-center gap-4 mb-4">
+              <span class="px-3 py-1 border border-beige-800 rounded-full text-[10px] font-bold tracking-widest uppercase text-beige-900 bg-transparent">Desert Isle Keeper</span>
+              <span class="text-primary font-bold text-sm tracking-widest uppercase">Grade: A+</span>
+           </div>
+           
+           <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-beige-900 mb-4 leading-[1.1] tracking-tight max-w-4xl">
+            The Christmas Miracle of Jonathan Toomey
+          </h1>
+          <div class="font-sans text-sm md:text-base tracking-widest uppercase text-beige-500 font-bold">
+            By Susan Wojciechowski
+          </div>
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="clearfix relative w-full">
+          
+          <!-- Book Cover - Floated Left (End to End style logic: Big image taking space) -->
+          <!-- Increased width to ~400px, rounded corners, shadow, hover effect -->
+          <div class="float-none md:float-left mr-0 md:mr-16 mb-12 md:mb-4 w-full md:w-[400px] relative z-10 clear-both md:clear-none flex flex-col items-center md:items-start">
+            <div class="relative group w-full max-w-[400px] transition-transform duration-500 hover:scale-[1.02] cursor-pointer">
+              
+              <!-- Image -->
+              <img 
+                src="https://allaboutromance.com/wp-content/uploads/2019/12/1-29.jpg" 
+                alt="Cover of The Christmas Miracle of Jonathan Toomey"
+                class="relative z-10 w-full h-auto shadow-2xl rounded-lg md:rounded-xl bg-white brightness-100 group-hover:brightness-105 transition-all duration-500" 
+              />
+              
+              <!-- Subtle glow/shadow underneath -->
+              <div class="absolute -inset-4 bg-primary/5 blur-2xl -z-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            </div>
+            
+            <!-- Metadata (Below image on large screens, still floated contextually) -->
+             <div class="mt-8 pt-6 border-t border-beige-300 w-full text-sm font-sans text-beige-800 max-w-[400px]">
+                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-beige-500 font-bold mb-1">Publisher</span>
+                    <span class="text-beige-900 font-medium">Candlewick Press</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-beige-500 font-bold mb-1">Published</span>
+                    <span class="text-beige-900 font-medium">09/1995</span>
+                  </div>
+                  <div class="flex flex-col col-span-2">
+                    <span class="text-[10px] uppercase tracking-widest text-beige-500 font-bold mb-1">ISBN</span>
+                    <span class="text-beige-900 font-medium font-mono text-xs">1406360384</span>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <a href="https://amzn.to/3JaIJ1Q" target="_blank" class="inline-flex items-center justify-center w-full py-3 px-6 border border-beige-900 text-beige-900 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-beige-900 hover:text-white transition-all duration-300">
+                    Buy on Amazon
+                  </a>
+                </div>
+              </div>
+          </div>
+
+          <!-- Review Text -->
+          <!-- Removed max-width constraint to let text flow end-to-end if needed, but keeping readable measure is better practice. 
+               However, "End to End" might mean filling the remaining space fully. 
+               I will set it to fill the remaining space effectively. -->
+          <div class="wrap-text font-serif text-lg md:text-xl lg:text-2xl leading-relaxed md:leading-loose text-beige-900/90 text-left">
+            <p class="mb-8 md:mb-10">
+              <span class="drop-cap">D</span>espite being a family of non-believers, every year we pull out our holiday paraphernalia. We dress the tree, hanging with care the delicate glass ornaments gifted to us over the many years, sentimentally rub our fingers over the ones our children made, pull out the stepladder and put our angel to balance precariously on the top branch. We play endless Spotify holiday playlists (here's my favorite) and watch <em>Love, Actually</em> and <em>Elf</em> for the millionth time. And we bring out our beloved holiday books. We giggle over Morris' <em>Disappearing Bag</em>, admire the wit of <em>Auntie Claus</em>, and wipe away the tears as we marvel over <em>The Christmas Miracle Of Jonathan Toomey</em>.
+            </p>
+            
+            <p class="mb-8 md:mb-10">
+              Published first in 1995, Susan Wojciechowski's profoundly moving tale is many things. It's a meditation on grief, a testament to learning to live after soul-crushing loss, a paean to power of selfless love, and celebration of the Christ's story. Not only is the prose pitch perfect but the illustrations are Caldecott worthy. (If your family listens to audiobooks, the narration by James Earl Jones is sublime and, oh happy day, free for all to hear.)
+            </p>
+            
+            <p class="mb-8 md:mb-10">
+              The book introduces us to Jonathan Toomey, a woodcarver in a small town in colonial America. He keeps to himself and the townspeople, who call him Mr. Gloomy, see him as a curmudgeon who complains when the birds sing and the children play. The village people didn’t know it, but there was a reason for his gloom, a reason for his grumbling, a reason why he walked hunched over, as if carrying a great weight on his shoulders. Some years earlier, when Jonathan Toomey was young and full of life and full of love, his wife and baby had become very ill. And, because those were the days before hospitals and medicines and skilled doctors, his wife and baby had died, three days apart from each other. So Jonathan Toomey had packed his belongings into a wagon and travelled till his tears stopped.
+            </p>
+
+            <p class="mb-8 md:mb-10">
+               He ends up in a valley where he knows no one and wants to know no one. But then, one early winter day, a knock comes at his door. A widow and her young son have a request. They are new to town and have lost their Christmas creche. The boy, Thomas, asks if Mr. Toomey could carve them a new one? He agrees, though gruffly, and tells them he’ll handle it. But Thomas wants to watch. And so begins a relationship that transforms them all.
+            </p>
+
+            <p class="mb-8 md:mb-10">
+               The miracle here isn’t flashy. It’s quiet. It’s found in the small shavings of wood on a floor, in the tentative questions of a child who misses his father, and in the thawing of a frozen heart. It is a story about how we heal each other, often without even knowing we are doing it. It is, simply put, a masterpiece.
+            </p>
+          </div>
+          
+        </div>
+        
+         <!-- Footer / Signature -->
+         <div class="mt-20 pt-10 border-t border-beige-300/50 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-white border border-beige-200 flex items-center justify-center font-serif italic font-bold text-beige-900 text-lg shadow-sm">
+                DG
+              </div>
+              <div class="text-left">
+                 <div class="text-xs font-bold uppercase tracking-widest text-beige-900">Review by Dabney Grinnan</div>
+                 <div class="text-[10px] text-beige-500 font-sans tracking-wider">Editor-in-Chief</div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+               <span class="text-xs font-bold uppercase tracking-widest text-beige-400">Share this review</span>
+               <div class="flex gap-3 text-beige-800">
+                 <button class="hover:text-primary transition-colors">Twitter</button>
+                 <button class="hover:text-primary transition-colors">Facebook</button>
+                 <button class="hover:text-primary transition-colors">Email</button>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      
+       <footer class="mt-24 text-center font-sans text-beige-800/40 text-[10px] tracking-widest uppercase">
+        <p>&copy; 2025 The Passionate Reader. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
