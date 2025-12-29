@@ -10,7 +10,11 @@ const navItems: NavItem[] = [
   { label: 'About', href: '#about' },
 ];
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,6 +25,16 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: NavItem) => {
+    if (onNavigate && (item.label === 'Reviews' || item.label === 'Home')) {
+      e.preventDefault();
+      onNavigate(item.label.toLowerCase());
+      setMobileMenuOpen(false);
+    } else {
+        setMobileMenuOpen(false);
+    }
+  };
 
   return (
     <nav 
@@ -34,7 +48,15 @@ const Navbar: React.FC = () => {
         
         {/* Left: Text Logo */}
         <div className="flex-shrink-0 z-20 w-[200px]">
-          <a href="/" className="group block">
+          <a href="/" 
+             className="group block"
+             onClick={(e) => {
+                 if (onNavigate) {
+                     e.preventDefault();
+                     onNavigate('home');
+                 }
+             }}
+          >
              <span className="font-serif text-2xl lg:text-3xl font-bold tracking-tight text-beige-900 group-hover:text-primary transition-colors duration-300">
                TPR<span className="text-primary">.</span>
              </span>
@@ -48,6 +70,7 @@ const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
+              onClick={(e) => handleNavClick(e, item)}
               className="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase py-2 after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-1 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.label}
@@ -87,7 +110,7 @@ const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, item)}
               className="font-serif text-3xl text-beige-900 hover:text-primary transition-colors"
             >
               {item.label}

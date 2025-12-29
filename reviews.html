@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews — The Passionate Reader</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              beige: {
+                50: '#FDFBF9',
+                100: '#F9F5F0', 
+                200: '#F2EBE0',
+                300: '#E6DCCF',
+                800: '#4A4641',
+                900: '#2D2A26', 
+              },
+              primary: {
+                DEFAULT: '#FF1D8D', 
+                light: '#FF64B0',
+                dark: '#D6006D',
+                10: '#FF1D8D1A', 
+                20: '#FF1D8D33', 
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Manrope"', 'sans-serif'],
+            },
+            boxShadow: {
+              'book': '0 25px 50px -12px rgba(45, 42, 38, 0.25), 0 10px 30px -5px rgba(45, 42, 38, 0.15)',
+              'soft': '0 4px 30px rgba(127, 133, 193, 0.1)',
+            },
+            maxWidth: {
+              'site': '1920px',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #F9F5F0; color: #2D2A26; -webkit-font-smoothing: antialiased; }
+      html { scroll-behavior: smooth; }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-beige-100 text-beige-900 selection:bg-primary/20 selection:text-primary-dark">
+      
+      <!-- Navbar -->
+      <nav class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-6 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
+        <div class="w-full max-w-site mx-auto px-[clamp(1.5rem,5vw,5rem)] flex items-center justify-between relative">
+          <div class="flex-shrink-0 z-20">
+            <a href="index.html" class="group block">
+               <div class="w-[50px] aspect-square rounded-full overflow-hidden border-2 border-primary/20 shadow-soft transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 bg-white">
+                 <img src="tpr-logo.png" alt="Logo" class="w-full h-full object-cover">
+               </div>
+            </a>
+          </div>
+          <div class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center space-x-10">
+              <a href="index.html" class="font-sans text-sm font-semibold text-beige-900 hover:text-primary transition-colors tracking-widest uppercase">Home</a>
+              <a href="reviews.html" class="font-sans text-sm font-semibold text-primary transition-colors tracking-widest uppercase border-b border-primary">Reviews</a>
+              <a href="#blog" class="font-sans text-sm font-semibold text-beige-900 hover:text-primary transition-colors tracking-widest uppercase">Blog</a>
+              <a href="#about" class="font-sans text-sm font-semibold text-beige-900 hover:text-primary transition-colors tracking-widest uppercase">About</a>
+          </div>
+          <div class="hidden md:flex items-center justify-end z-20">
+            <button class="bg-primary text-white font-sans font-medium rounded-full text-sm px-6 py-2.5 hover:bg-primary-dark transition-all">Subscribe</button>
+          </div>
+        </div>
+      </nav>
+
+      <main class="pt-32 pb-24">
+        <div class="w-full max-w-site mx-auto px-[clamp(1.5rem,5vw,5rem)]">
+          
+          <div class="text-center mb-20">
+            <span class="font-sans text-xs md:text-sm font-bold tracking-[0.2em] text-primary uppercase mb-3 block">The Collection</span>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-beige-900 mb-6">Book Reviews</h1>
+            <p class="font-sans text-beige-800/70 max-w-2xl mx-auto text-lg font-light">
+              Explore our full library of honest reviews and literary recommendations.
+            </p>
+          </div>
+
+          <!-- Reviews Grid -->
+          <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
+            <!-- Reviews will be injected here by script -->
+          </div>
+
+        </div>
+      </main>
+
+      <footer class="bg-beige-200 py-12 px-6 text-center font-sans text-beige-800 text-sm">
+        <p>&copy; <span id="year"></span> The Passionate Reader. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const reviewsData = [
+        {
+          title: "The Christmas Miracle of Jonathan Toomey",
+          author: "Susan Wojciechowski",
+          img: "https://allaboutromance.com/wp-content/uploads/2019/12/1-29.jpg",
+          type: "Desert Isle Keeper",
+          excerpt: "Despite being a family of non-believers, every year we pull out our holiday paraphernalia. We dress the tree, hanging with care the delicate glass ornaments gifted to us over the many years..."
+        },
+        {
+          title: "The Plight Before Christmas",
+          author: "Kate Stewart",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/12/1-24.jpg",
+          type: "AAR Review",
+          excerpt: "The Plight Before Christmas needs an editor, has leads in their late thirties who behave at least ten years younger, and manufactures so much angst in its final few chapters..."
+        },
+        {
+          title: "Hunk for the Holidays",
+          author: "Katie Lane",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/12/1-8.jpg",
+          type: "AAR Review",
+          excerpt: "Hunk for the Holidays knows exactly what it is: a light Christmas love story that exists just to entertain. Lane leans into the charm of a slightly ridiculous premise..."
+        },
+        {
+          title: "Duet",
+          author: "Julie Kriss",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/11/1-7.jpg",
+          type: "AAR Review",
+          excerpt: "Duet, the first in Julie Kriss' Road Kings series, has a sweetheart of a smokin' hot rock star improbably named Denver who spends much of this slight tale trying to convince Callie..."
+        },
+        {
+          title: "How to Summon a Fairy Godmother",
+          author: "Laura J. Mayo",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/10/1-19.jpg",
+          type: "AAR Review",
+          excerpt: "What if Cinderella—here named Beatrice—were a self-serving, conniving brat? And what if her stepsister—here named Theodosia—were the one who deserved a happy ending?"
+        },
+        {
+          title: "Rebel Bride",
+          author: "Kate Meader",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/10/1-9.jpg",
+          type: "AAR Review",
+          excerpt: "Hatch Kershaw, NFL hockey star and son of one of the sport’s greats, doesn’t want to be at the wedding of his asshat teammate Dash and Summer, his violet eyed bride."
+        },
+        {
+          title: "The Everlasting",
+          author: "Alix E. Harrow",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/07/1-31.jpg",
+          type: "Desert Isle Keeper",
+          excerpt: "The Everlasting begins where it ends: beneath a yew tree. Its first chapter, The First Death of Una Everlasting, reads like a eulogy written for a nation's best."
+        },
+        {
+          title: "Love Sick",
+          author: "Deidra Duncan",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/10/1-11.jpg",
+          type: "AAR Review",
+          excerpt: "I met my husband, a surgeon, in the last year of his final residency, and for the next fifteen years watched him train residents of his own. Residency isn’t just hard; it’s a ritual of endurance."
+        },
+        {
+          title: "Thief of Night",
+          author: "Holly Black",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/05/1-11.jpg",
+          type: "AAR Review",
+          excerpt: "Thief of Night is the rare sequel that not only improves its predecessor—it redeems it. I came to this duology as a fan of The Folk of the Air, expecting something dark."
+        },
+        {
+          title: "The Good Liar",
+          author: "Denise Mina",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/09/1-4.jpg",
+          type: "AAR Review",
+          excerpt: "I love many of Denise Mina’s books, but The Good Liar is not one. It begins well. Doctor Claudia O’Sheil, famous forensic scientist, is preparing to speak at a glittering fundraiser."
+        },
+        {
+          title: "Cowboy's Last Stand",
+          author: "Jill Sorenson",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/09/1-5.jpg",
+          type: "AAR Review",
+          excerpt: "Romantic suspense great Jill Sorenson has not only a new book out, but it’s the start of a series. Cowboy’s Last Stand grounds its stories in the struggles of ordinary people."
+        },
+        {
+          title: "We Are All Guilty Here",
+          author: "Karin Slaughter",
+          img: "https://allaboutromance.com/wp-content/uploads/2025/03/1-29.jpg",
+          type: "Desert Isle Keeper",
+          excerpt: "Karin Slaughter’s We Are All Guilty Here opens with a disappearance. Two teenage girls vanish during a Fourth of July celebration in North Falls, Georgia."
+        }
+      ];
+
+      const grid = document.getElementById('reviews-grid');
+      reviewsData.forEach(item => {
+        const article = document.createElement('article');
+        article.className = "group cursor-pointer flex flex-col items-center";
+        article.innerHTML = `
+          <div class="relative w-full mb-8 flex items-center justify-center transition-all duration-500 group-hover:-translate-y-2">
+            <div class="w-[160px] md:w-[180px] shadow-book transition-transform duration-500 group-hover:scale-105 rounded-sm overflow-hidden">
+              <img src="${item.img}" alt="${item.title}" class="w-full h-auto block" loading="lazy">
+            </div>
+          </div>
+          <div class="text-center px-4">
+            <div class="mb-3 flex items-center justify-center gap-2">
+              <span class="px-2 py-0.5 border border-beige-300 rounded-full text-[10px] font-bold tracking-widest uppercase text-beige-800/60 bg-white/50">${item.type}</span>
+            </div>
+            <h3 class="font-serif text-xl md:text-2xl text-beige-900 mb-2 group-hover:text-primary transition-colors duration-300 leading-tight line-clamp-2">${item.title}</h3>
+            <p class="font-sans text-xs font-bold tracking-widest text-beige-900/50 uppercase mb-4">${item.author}</p>
+            <p class="font-sans text-beige-800/80 text-sm leading-relaxed line-clamp-3 mb-6">${item.excerpt}</p>
+            <a href="#" class="inline-flex items-center text-xs font-bold tracking-widest uppercase text-primary border-b border-primary/20 pb-0.5 hover:text-primary-dark hover:border-primary transition-all">Read Review</a>
+          </div>
+        `;
+        grid.appendChild(article);
+      });
+    </script>
+  </body>
+</html>
