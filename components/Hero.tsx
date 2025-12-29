@@ -8,8 +8,6 @@ const Hero: React.FC = () => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat z-0"></div>
       
-      {/* Stronger white overlay for legibility */}
-      <div className="absolute inset-0 bg-white/70 z-0 backdrop-blur-[1px]"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-beige-100/90 via-white/30 to-transparent z-0"></div>
 
       {/* Content Container */}
