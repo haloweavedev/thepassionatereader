@@ -85,20 +85,49 @@
       }
     </style>
   </head>
-  <body class="bg-beige-100">
-    <div class="min-h-screen py-12 px-[clamp(1.5rem,5vw,5rem)]">
+    <div class="min-h-screen bg-beige-100 selection:bg-primary/20 selection:text-primary-dark">
       
-       <!-- Back Navigation -->
-       <nav class="max-w-site mx-auto mb-12 flex justify-between items-center">
-         <a href="index.html" class="group inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-beige-800 hover:text-primary transition-colors">
-            <span class="transform group-hover:-translate-x-1 transition-transform">←</span>
-            Back to Journal
-          </a>
+      <!-- Navbar -->
+      <nav class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-6 bg-beige-100/80 backdrop-blur-md">
+        <div class="w-full max-w-site mx-auto px-[clamp(1.5rem,5vw,5rem)] flex items-center justify-between relative">
           
-          <div class="hidden md:flex items-center gap-4 text-xs font-serif italic text-beige-400">
-             <span>December 25, 2025</span>
+          <!-- Left: Circular Image Logo -->
+          <div class="flex-shrink-0 z-20">
+            <a href="index.html" class="group block">
+               <div class="w-[50px] md:w-[60px] lg:w-[70px] aspect-square rounded-full overflow-hidden border-2 border-primary/20 shadow-soft transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-lg bg-white">
+                 <img src="tpr-logo.png" alt="The Passionate Reader Logo" class="w-full h-full object-cover">
+               </div>
+               <span class="sr-only">The Passionate Reader</span>
+            </a>
           </div>
-       </nav>
+  
+          <!-- Center: Navigation (Floating Pill) -->
+          <div id="nav-pill" class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center space-x-[clamp(1.5rem,2vw,2.5rem)] px-[clamp(2rem,3vw,3rem)] py-3 rounded-full bg-white/40 backdrop-blur-md border border-white/20 shadow-sm transition-all duration-300 hover:bg-white/60 hover:shadow-md">
+              <a href="index.html" class="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+              <a href="reviews.html" class="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
+              <a href="index.html#search" class="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">PowerSearch</a>
+              <a href="index.html#blog" class="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
+              <a href="index.html#about" class="relative font-sans text-xs lg:text-sm font-semibold text-beige-900 hover:text-primary transition-colors duration-200 tracking-widest uppercase after:content-[''] after:absolute after:w-0 after:h-px after:bg-primary after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full">About</a>
+          </div>
+  
+          <!-- Right: CTA -->
+          <div class="hidden md:flex items-center justify-end z-20">
+            <button class="inline-flex items-center justify-center transition-all duration-300 ease-out font-sans font-medium rounded-full tracking-wide bg-white text-primary hover:bg-primary hover:text-white shadow-soft hover:shadow-lg transform hover:-translate-y-0.5 text-sm px-6 py-2.5">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="pt-32 pb-12 px-[clamp(1.5rem,5vw,5rem)]">
+        
+        <!-- Breadcrumb / Back Navigation (Simplified) -->
+        <div class="max-w-site mx-auto mb-12">
+          <a href="reviews.html" class="group inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-beige-800 hover:text-primary transition-colors">
+             <span class="transform group-hover:-translate-x-1 transition-transform">←</span>
+             Back to All Reviews
+           </a>
+        </div>
 
       <div class="max-w-site mx-auto">
         
